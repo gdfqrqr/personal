@@ -1,0 +1,12 @@
+@import './utils/var';
+@import './utils/mixin'; 
+@import './utils/animate'; 
+
+@import './base/typo';
+@import './base/reset';
+@import './base/common';
+
+@import './layout/header';
+@import './layout/footer';
+
+@import './page/main';
