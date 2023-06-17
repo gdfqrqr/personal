@@ -1,0 +1,25 @@
+section:not(.sc-visual),footer{display: none;}
+.sc-visual{
+    .title-wrap{}
+    .title-box{
+        display: flex;
+        span{
+            color: #262523;
+            font-weight: 900;
+            font-size: 11.1vw;
+            letter-spacing: -9.2px;
+        }
+    }
+    .shape{
+        position: relative;
+
+        svg{
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+        }
+    }
+}

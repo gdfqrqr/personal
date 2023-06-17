@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "suit";
+  src: url(../font/SUITE-Light.woff2) format(woff2);
+  font-weight: 100;
+}
+@font-face {
+  font-family: "suit";
+  src: url(../font/SUITE-Regular.woff2) format(woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "suit";
+  src: url(../font/SUITE-Bold.woff2) format(woff2);
+  font-weight: 700;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+/* setting */
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "suit", sans-serif;
+  background: #ececec;
+}
+
+#icons {
+  display: none;
+}
+
+.inner {
+  padding: 25px 50px;
+}
+
+.header {
+  padding: 25px 50px;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  mix-blend-mode: difference;
+  z-index: 10;
+}
+.header .logo {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ececec;
+}
+.header .menu-wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.header .menu-wrap em {
+  display: block;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.header .menu-wrap em.on {
+  opacity: 1;
+}
+.header .menu-wrap em::before {
+  content: "";
+  width: 140px;
+  height: 7px;
+  margin-bottom: 8px;
+  background: #000;
+  border-radius: 10px;
+  display: block;
+}
+.header .menu-item {
+  line-height: 2;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: right;
+}
+.header .menu-item a {
+  color: #ececec;
+}
+
+section:not(.sc-visual), footer {
+  display: none;
+}
+
+.sc-visual .title-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.sc-visual .title-box span {
+  color: #262523;
+  font-weight: 900;
+  font-size: 11.1vw;
+  letter-spacing: -9.2px;
+}
+.sc-visual .shape {
+  position: relative;
+}
+.sc-visual .shape svg {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
