@@ -13,6 +13,22 @@
         font-size: 3rem;
         font-weight: 900;
         color: #ececec;
+        a{
+            position: relative;
+
+            &::after{
+                content: '';
+                position: absolute;
+                right: -6px;
+                bottom: 1px;
+                width: 14px;
+                height: 14px;
+                z-index: -1;
+                background: #0725a8;
+                border-radius: 100%;
+            }
+        }
+
     }
 
     .menu-wrap{
