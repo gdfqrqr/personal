@@ -8,6 +8,8 @@
     justify-content: space-between;
     mix-blend-mode: difference;
     z-index: 10;
+    background: #000;
+    backdrop-filter: blur(3px);
 
     .logo{
         font-size: clamp(2rem, 2vw, 3vw);
