@@ -292,12 +292,40 @@ body {
   font-weight: 100;
   font-family: "suit";
   font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(100% - 113px);
 }
 .footer .ml12 .letter,
 .footer .ml12-2 .letter,
 .footer .ml12-3 .letter,
 .footer .ml12-4 .letter {
   display: inline-block;
+}
+.footer .link-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  position: absolute;
+  right: 0;
+  opacity: 0.7;
+}
+.footer .link-site {
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+.footer .link-site img {
+  width: 100%;
+  height: 100%;
 }
 
 .sc-visual {
