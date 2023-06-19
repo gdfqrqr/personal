@@ -22,12 +22,18 @@
                 font-size: 100px;
                 line-height: 1.2;
                 font-weight: 900;
+                @include mobile{
+                    font-size: 70px;
+                }
             }
             strong{
                 font-size: 48px;
                 font-style: normal;
                 display: block;
                 position: absolute;
+                @include mobile{
+                    font-size: 28px;
+                }
             }
         }
     }
@@ -43,6 +49,12 @@
         font-size: 18px;
         position: relative;
         margin-top: 100px;
+        @include mobile{
+            width: 100px;
+            height: 100px;
+            margin-top: 160px;
+            font-size: 14px;
+        }
 
         &::after{
             background:#fed931;
@@ -81,7 +93,6 @@
         color: rgba(255, 255, 255, 0.5);
         position: absolute;
         bottom: 25px;
-        // right: 25px;
         font-weight: 100;
         font-family: 'suit';
         font-size: 12px;

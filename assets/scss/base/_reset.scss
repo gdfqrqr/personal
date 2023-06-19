@@ -22,5 +22,5 @@ table { border-collapse: collapse; border-spacing: 0}
 ul { list-style: none; } 
 
 /* setting */
-html{font-size: 10px;}
-body{font-family: 'basis', sans-serif; background: #fff; /*background: #ececec;*/}
+html{scroll-behavior: smooth !important;}
+body{font-family: 'basis', sans-serif; background: #fff; font-size: 10px;  }

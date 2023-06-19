@@ -1,10 +1,14 @@
 #icons {display: none;}
 
 .inner{
-    padding: 0px 50px;
+    padding: 0 2.6vw;
 }
 .title-wrap{
     padding: 0 0 2vw 2vw;
+    @include mobile{
+        text-align: center;
+        margin-bottom: 20px;
+    }
     em{
         font-weight: 400;
         padding: 1px 7px;
