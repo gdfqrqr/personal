@@ -1,74 +1,69 @@
 $(function(){
 
-
-//project hove 
-$('.about-item .item-inner').hover(function(){
-    $(this).addClass('active');
-}, function(){
-    $(this).removeClass('active');
-})
+    //visual
 
 
-// $(document).on('mousemove', function(e) {
-//     var xPos = e.pageX;
-//     var yPos = e.pageY;
 
-//     let flag = false;
     
-//     $('.project-item').each(function(i, el){
-//         $(el).offset().top
-//         var xStart = $(el).offset().left
-//         var xEnd = xStart + $(el).width()
-    
-//         var yStart = $(el).offset().top
-//         var yEnd = yStart + $(el).height()
+    gsap.to('.icon',0.7, {opacity:0})
 
-//         if (xPos >= xStart + 10 && xPos <= xEnd -10 && yPos >= yStart + 10 && yPos <= yEnd - 10) {
-            
-//             let color = el.dataset.img
+    var word = new TimelineMax()
+    .addLabel('b')
+    .to('.word',0.7, {visibility:'visible'},'b')
+    .to('.word',0.7, {opacity:1},'b')
 
-//           $('.circle-out').addClass('on')
-//             $('.circle-out').css({
-//               'top': yPos,
-//               'left': xPos,
-//               'background-color': color
-//             }); 
-//             $('.circle-out').stop().animate({
-//                 'transform': 'scale(1.5)'
-//             },100)
+    .addLabel('a')
+    .to('.word',0.7, {opacity:0},'a')
+    .to('.icon',0.7, {opacity:1},'a')
 
-//             flag = true;
-//         }        
-//         });
-         
-//         if (flag == false) {
-//             $('.circle-out').removeClass('on')
-//         }
-//     })
-                
-    //  else if (xPos >= xStart2 && xPos <= xEnd2 && yPos >= yStart2 && yPos <= yEnd2) {
-    //     $('.circle-out').addClass('on')
-    //     $('.circle-out').css({
-    //       'top': yPos,
-    //       'left': xPos,
-    //       'background-color': 'black'
-    //     });
-    // } 
-   
+    .repeat(-1);
+
+    gsap.to('.icon2',0.9, {opacity:0})
+
+    var word2 = new TimelineMax()
+    .addLabel('b')
+    .to('.word2',0.9, {visibility:'visible'},'b')
+    .to('.word2',0.9, {opacity:1},'b')
+
+    .addLabel('a')
+    .to('.word2',0.9, {opacity:0},'a')
+    .to('.icon2',0.9, {opacity:1},'a')
+
+    .repeat(-1);
+
+    var circle = new TimelineMax()
+
+    .to('.circle',0.5, {width:'20vw',delay:1})
+    .to('.circle',0.5, {width:'6.5vw',delay:2})
+    .repeat(-1)
+
+
+
+
+
+
+
+
+    //project hover
+    $('.project-item .item-inner').hover(function(){
+        $(this).addClass('active');
+    }, function(){
+        $(this).removeClass('active');
+    })
+
     //about
     gsap.registerPlugin(ScrollTrigger);
-
-    let sections = gsap.utils.toArray(".project-item");
+    let sections = gsap.utils.toArray(".about-item");
 
     gsap.to(sections, {
     xPercent: -100 * (sections.length - 1),
     ease: "none",
     scrollTrigger: {
-        trigger: ".sc-project .project-inner",
+        trigger: ".sc-about",
         pin: true,
         scrub: 1,
         snap: 1 / (sections.length - 1),
-        end: () => "+=" + document.querySelector(".sc-about .inner").offsetWidth
+        // end: () => "+=" + document.querySelector(".sc-about .inner").offsetWidth
     }
     });
 
@@ -76,6 +71,82 @@ $('.about-item .item-inner').hover(function(){
     $('.link-mail').hover(function(){
         $(this).addClass('on')
     }, function(){
-            $(this).removeClass('on')
+        $(this).removeClass('on')
     })
+
+    var textWrapper = document.querySelector('.ml12');
+    var textWrapper2 = document.querySelector('.ml12-2');
+    var textWrapper3 = document.querySelector('.ml12-3');
+    var textWrapper4 = document.querySelector('.ml12-4');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    textWrapper3.innerHTML = textWrapper3.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    textWrapper4.innerHTML = textWrapper4.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({loop: true})
+    .add({
+        targets: '.ml12 .letter',
+        translateX: [40,0],
+        translateZ: 0,
+        opacity: [0,1],
+        easing: "easeOutExpo",
+        duration: 1200,
+        delay: (el, i) => 500 + 30 * i
+    }).add({
+        targets: '.ml12 .letter',
+        translateX: [0,-30],
+        opacity: [1,0],
+        easing: "easeInExpo",
+        duration: 1100,
+        delay: (el, i) => 100 + 30 * i
+    })
+
+    .add({
+        targets: '.ml12-2 .letter',
+        translateX: [40,0],
+        translateZ: 0,
+        opacity: [0,1],
+        easing: "easeOutExpo",
+        duration: 1200,
+        delay: (el, i) => 500 + 30 * i
+    }).add({
+        targets: '.ml12-2 .letter',
+        translateX: [0,-30],
+        opacity: [1,0],
+        easing: "easeInExpo",
+        duration: 1100,
+        delay: (el, i) => 100 + 30 * i
+    })
+    .add({
+        targets: '.ml12-3 .letter',
+        translateX: [40,0],
+        translateZ: 0,
+        opacity: [0,1],
+        easing: "easeOutExpo",
+        duration: 1200,
+        delay: (el, i) => 500 + 30 * i
+    }).add({
+        targets: '.ml12-3 .letter',
+        translateX: [0,-30],
+        opacity: [1,0],
+        easing: "easeInExpo",
+        duration: 1100,
+        delay: (el, i) => 100 + 30 * i
+    })
+    .add({
+        targets: '.ml12-4 .letter',
+        translateX: [40,0],
+        translateZ: 0,
+        opacity: [0,1],
+        easing: "easeOutExpo",
+        duration: 1200,
+        delay: (el, i) => 500 + 30 * i
+    }).add({
+        targets: '.ml12-4 .letter',
+        translateX: [0,-30],
+        opacity: [1,0],
+        easing: "easeInExpo",
+        duration: 1100,
+        delay: (el, i) => 100 + 30 * i
+    });
 })
