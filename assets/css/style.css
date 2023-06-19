@@ -497,6 +497,7 @@ body {
   max-width: 250px;
   max-height: 250px;
   z-index: 1;
+  border-radius: 30px;
 }
 .sc-project .project-item .item-inner .arrow-wrap {
   display: none;
