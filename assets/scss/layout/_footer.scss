@@ -98,7 +98,10 @@
         font-size: 12px;
         display: flex;
         align-items: center;
-        width: calc(100% - 113px);
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 25px;
+        left: 0;
     }
       
       .ml12 .letter,
@@ -110,9 +113,7 @@
       .link-wrap{
         display: flex;
         align-items: center;
-        gap: 10px;
-        position: absolute;
-        right: 0;
+        gap: 15px;
         opacity: .7;
       }
       .link-site{
