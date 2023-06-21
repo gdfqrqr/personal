@@ -6,15 +6,15 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    mix-blend-mode: difference;
+    // mix-blend-mode: difference;
     z-index: 10;
-    background: #000;
+    // background: #000;
     backdrop-filter: blur(3px);
 
     .logo{
         font-size: clamp(2rem, 2vw, 3vw);
         font-weight: 900;
-        color: #ececec;
+        color: #000;
         a{
             position: relative;
 
@@ -26,7 +26,8 @@
                 width: 14px;
                 height: 14px;
                 z-index: -1;
-                background: #0725a8;
+                // background: #0725a8;
+                background-color: #fed931;
                 border-radius: 100%;
             }
         }
@@ -67,7 +68,8 @@
         font-weight: 600;
         text-align: right;
         a{
-            color: #ececec;
+            // color: #ececec;
+            color: #000;
         }
     }
 

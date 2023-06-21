@@ -155,4 +155,25 @@ $(function(){
         duration: 1100,
         delay: (el, i) => 100 + 30 * i
     });
+
+    
+    // 스크롤 footer 도달시 header 색상 바꾸기
+    $(window).on('scroll', function () {
+        
+        var here = $(".footer").offset().top;
+        var height = $(document).scrollTop();
+
+        height += 0.25;
+        
+        if (here <= height) {
+            $('.logo a').css('color', 'white')
+            $('.menu-item a').css('color', 'white')
+            
+        } else{
+            $('.logo a').css('color', 'black')
+            $('.menu-item a').css('color', 'black')
+        }
+    })
+
+
 })
