@@ -542,7 +542,11 @@
     .inner{
         padding: 100px 0;
     }
-    
+    .title-wrap{
+        em{
+            color: #fff;
+        }
+    }
     .works-list{
         padding: 0 2vw;
         display: flex;
@@ -561,7 +565,7 @@
         &.right{
             margin-left: auto;
         }
-
+  
         .thum-box{
             overflow: hidden;
             border-radius: 30px;

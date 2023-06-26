@@ -93,7 +93,7 @@ body {
 }
 
 .wrapper {
-  min-width: 280px;
+  min-width: 320px;
 }
 
 .inner {
@@ -878,6 +878,9 @@ body {
 }
 .sc-works .inner {
   padding: 100px 0;
+}
+.sc-works .title-wrap em {
+  color: #fff;
 }
 .sc-works .works-list {
   padding: 0 2vw;
