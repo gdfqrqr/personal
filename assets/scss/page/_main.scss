@@ -543,12 +543,6 @@
         padding: 100px 0;
     }
     
-    .title-wrap{
-        em{
-            color: #fff;
-        }
-    }
-
     .works-list{
         padding: 0 2vw;
         display: flex;
@@ -556,6 +550,9 @@
     }
     .works-item{
         width: 55%;
+        @include tablet{
+            width: 100%;
+        }
 
         &~.works-item{
             margin-top: 5vw;
@@ -582,15 +579,24 @@
             color: #fff;
             margin-top: 20px;
             font-weight: bold;
+            @include tablet{
+                text-align: center;
+            }
 
             .title{
                 font-size: 3vw;
+                @include tablet{
+                    font-size: 7vw;
+                }
             }
             .hover-wrap{
                 display: flex;
                 flex-direction: row;
                 gap: 15px;
                 margin-top: 15px;
+                @include tablet{
+                    justify-content: center;
+                }
 
                 .text{
                     font-size: 1vw;
