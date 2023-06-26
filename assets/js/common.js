@@ -165,8 +165,6 @@ $(function(){
         var here3 = $(".sc-project").offset().top;
         var height = $(document).scrollTop();
 
-        
-
         if(here2> height){
             $('.logo a').css('color', 'black')
             $('.menu-item a').css('color', 'black')
