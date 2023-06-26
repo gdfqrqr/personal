@@ -3,14 +3,14 @@ $(function(){
     // ScrollTrigger.saveStyles(".mobile, .desktop");
     ScrollTrigger.matchMedia({
         "(min-width: 1023px)": function() {
-                //about
+            //about
             let sections = gsap.utils.toArray(".about-item");
 
             gsap.to(sections, {
             xPercent: -100 * (sections.length - 1),
             ease: "none",
             scrollTrigger: {
-                trigger: ".sc-about",
+                trigger: ".sc-about .about-list",
                 pin: true,
                 scrub: 1,
                 snap: 1 / (sections.length - 1),
@@ -161,19 +161,43 @@ $(function(){
     $(window).on('scroll', function () {
         
         var here = $(".footer").offset().top;
+        var here2 = $(".sc-works").offset().top;
+        var here3 = $(".sc-project").offset().top;
         var height = $(document).scrollTop();
 
-        height += 0.25;
         
-        if (here <= height) {
-            $('.logo a').css('color', 'white')
-            $('.menu-item a').css('color', 'white')
-            
-        } else{
+
+        if(here2> height){
             $('.logo a').css('color', 'black')
             $('.menu-item a').css('color', 'black')
         }
+        if(here2 <= height){
+            $('.logo a').css('color', 'white')
+            $('.menu-item a').css('color', 'white')
+        } 
+        if(here3 <= height){
+            $('.logo a').css('color', 'black')
+            $('.menu-item a').css('color', 'black')
+        }
+        height += 1;
+        if (here <= height) {
+            $('.logo a').css('color', 'white')
+            $('.menu-item a').css('color', 'white')
+        }
     })
 
+    //aos
+    AOS.init();
 
+    //works hover event
+    $('.works-item.left').hover(function(){
+        $('.sc-works').css('background-color', '#8c1d15')
+    }, function(){
+        $('.sc-works').css('background-color', '#000')
+    })
+    $('.works-item.right').hover(function(){
+        $('.sc-works').css('background-color', '#12316c')
+    }, function(){
+        $('.sc-works').css('background-color', '#000')
+    })
 })
