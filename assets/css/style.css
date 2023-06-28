@@ -344,10 +344,16 @@ body {
 
 .sc-visual {
   background: #fff;
+  max-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .sc-visual .inner {
-  padding-top: 122px;
-  padding-bottom: 100px;
+  padding-top: 5vw;
 }
 @media (max-width: 1023px) {
   .sc-visual .inner {
@@ -363,7 +369,7 @@ body {
 .sc-visual .title-box span {
   color: #000;
   font-weight: 900;
-  font-size: 10.5vw;
+  font-size: 8vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -373,7 +379,7 @@ body {
 }
 .sc-visual .shape {
   position: relative;
-  width: 8vw;
+  width: 6vw;
 }
 .sc-visual .shape svg {
   position: absolute;
@@ -383,26 +389,29 @@ body {
   height: 100%;
 }
 .sc-visual .width {
-  width: 9vw;
+  width: 6.5vw;
 }
 .sc-visual .circle {
-  border: 1.5vw solid #000;
+  border: 1.2vw solid #000;
   border-radius: 5vw;
-  height: 8.5vw;
-  margin-top: 1.5vw;
-  width: 6.5vw;
+  height: 6.5vw;
+  margin-top: 1.2vw;
+  width: 5vw;
 }
 .sc-visual .margin {
   margin-left: 2vw;
 }
 .sc-visual .dot {
-  margin-top: 7.5vw;
-  width: 3vw;
-  height: 3vw;
+  margin-top: 5.5vw;
+  width: 2vw;
+  height: 2vw;
   border-radius: 100%;
   background-color: #fed931;
 }
 
+.sc-project {
+  overflow: hidden;
+}
 .sc-project .inner {
   padding: 100px 0;
   background: #fed931;

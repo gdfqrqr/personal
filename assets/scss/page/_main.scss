@@ -1,9 +1,12 @@
 .sc-visual {
     background: #fff;
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
 
     .inner {
-        padding-top: 122px;
-        padding-bottom: 100px;
+        padding-top: 5vw;
+        // padding-bottom: 100px;
 
         @include tablet {
             padding-top: 80px;
@@ -17,7 +20,7 @@
         span {
             color: #000;
             font-weight: 900;
-            font-size: 10.5vw;
+            font-size: clamp(8vw, 8vw, 8vw);
             display: flex;
             justify-content: center;
         }
@@ -25,7 +28,7 @@
 
     .shape {
         position: relative;
-        width: 8vw;
+        width: 6vw;
 
         svg {
             position: absolute;
@@ -37,15 +40,15 @@
     }
 
     .width {
-        width: 9vw;
+        width: 6.5vw;
     }
 
     .circle {
-        border: 1.5vw solid #000;
+        border: 1.2vw solid #000;
         border-radius: 5vw;
-        height: 8.5vw;
-        margin-top: 1.5vw;
-        width: 6.5vw;
+        height: 6.5vw;
+        margin-top: 1.2vw;
+        width: 5vw;
     }
 
     .margin {
@@ -53,16 +56,16 @@
     }
 
     .dot {
-        margin-top: 7.5vw;
-        width: 3vw;
-        height: 3vw;
+        margin-top: 5.5vw;
+        width: 2vw;
+        height: 2vw;
         border-radius: 100%;
         background-color: #fed931;
     }
 }
 
 .sc-project {
-
+    overflow: hidden;
     .inner {
         padding: 100px 0;
         background: #fed931;
