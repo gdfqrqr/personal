@@ -45,6 +45,7 @@
             text-align: center;
             opacity: 0;
             transition: opacity 0.2s;
+            
             &.on{
                 opacity: 1;
             }

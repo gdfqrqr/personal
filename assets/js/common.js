@@ -49,11 +49,9 @@ $(function(){
             var circle = new TimelineMax()
 
             .to('.circle',0.5, {width:'20vw',delay:1})
-            .to('.circle',0.5, {width:'6.5vw',delay:2})
+            .to('.circle',0.5, {width:'5vw',delay:2})
             .repeat(-1)
-
         }
-
     })
     
   

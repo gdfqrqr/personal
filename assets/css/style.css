@@ -4,18 +4,18 @@
   font-weight: 400;
 }
 @font-face {
-  font-family: "suit";
-  src: url(../font/SUITE-Light.woff2);
+  font-family: "pretendard";
+  src: url(../font/pretendard-Light.woff);
   font-weight: 100;
 }
 @font-face {
-  font-family: "suit";
-  src: url(../font/SUITE-Regular.woff2);
+  font-family: "pretendard";
+  src: url(../font/pretendard-Regular.woff);
   font-weight: 400;
 }
 @font-face {
-  font-family: "suit";
-  src: url(../font/SUITE-Bold.woff2);
+  font-family: "pretendard";
+  src: url(../font/pretendard-Black.woff);
   font-weight: 700;
 }
 * {
@@ -301,7 +301,7 @@ body {
   position: absolute;
   bottom: 25px;
   font-weight: 100;
-  font-family: "suit";
+  font-family: "pretendard";
   font-size: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -542,6 +542,7 @@ body {
   }
 }
 .sc-project .project-item .item-inner p {
+  font-family: "pretendard";
   -webkit-transition: 0.3s;
   transition: 0.3s;
   width: 30%;
