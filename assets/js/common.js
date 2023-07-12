@@ -19,7 +19,7 @@ $(function(){
             });
         },
         "all": function() {
-                //visual
+             //visual
             gsap.to('.icon',0.7, {opacity:0})
 
             var word = new TimelineMax()
@@ -84,6 +84,7 @@ $(function(){
     var textWrapper2 = document.querySelector('.ml12-2');
     var textWrapper3 = document.querySelector('.ml12-3');
     var textWrapper4 = document.querySelector('.ml12-4');
+
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
     textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
     textWrapper3.innerHTML = textWrapper3.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
